@@ -67,6 +67,12 @@ module.exports = function(grunt) {
 				filter: 'isFile',
 				src: ['*.css','*.eot','*.ttf','*.woff','*.woff2'],
 				dest: 'docs/fonts/vazir/'
+			},
+			fontawesomecss: {
+				expand: true,
+				cwd: 'node_modules/@fortawesome/fontawesome-free/', 
+				src: ['css/*','webfonts/*'],
+				dest: 'docs/fonts/fontawesome/'
 			}
 		}
 	});
