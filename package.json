@@ -30,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/pratikborsadiya/vali-admin/issues"
   },
-  "homepage": "http://pratikborsadiya.in/blog/vali-admin"
+  "homepage": "http://pratikborsadiya.in/blog/vali-admin",
+  "dependencies": {
+    "grunt-contrib-copy": "^1.0.0",
+    "vazir-font": "^26.0.2"
+  }
 }

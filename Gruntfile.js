@@ -59,6 +59,15 @@ module.exports = function(grunt) {
 			dist: {
 				src: ['docs/css/*.css']
 			}
+		},
+		copy: {
+			vazir: {
+				expand: true,
+				cwd: 'node_modules/vazir-font/dist/', 
+				filter: 'isFile',
+				src: ['*.css','*.eot','*.ttf','*.woff','*.woff2'],
+				dest: 'docs/fonts/vazir/'
+			}
 		}
 	});
 
@@ -67,8 +76,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// Set task aliases
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['pug','sass','postcss']);
+	grunt.registerTask('build', ['copy','pug','sass','postcss']);
 };
