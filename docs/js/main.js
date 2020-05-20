@@ -24,4 +24,15 @@
 	//Activate bootstrip tooltips
 	$("[data-toggle='tooltip']").tooltip();
 
+	$("a[href='" + document.location.pathname + "']")
+		.addClass('active')
+		.parents('li.treeview')
+		.addClass('is-expanded');
+
+	$(".app-menu").find('a').each(function () {
+        if (document.location.pathname.startsWith($(this).attr("href"))) {
+            $(this).addClass('active').parents('li.treeview').addClass('is-expanded');
+        }
+    });
+
 })();
