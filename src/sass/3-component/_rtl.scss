@@ -62,21 +62,32 @@
 	}
 
 	.treeview {
+		padding: 5px 20px 5px 5px;
+
 		&.is-expanded {
 			.treeview-indicator { transform: rotate(-90deg); }
 		}
 	}
 
 	.dropdown-item {
+		text-align: right; // For `<button>`s
 		.fa,
 		.icon {
-			margin-right: inherit;
+			margin-right: unset;
 			margin-left: 5px;
 		}
 	}
 
-	.dropdown-item {
-		text-align: right; // For `<button>`s
+	.app-notification__icon { 
+		padding-right: unset;
+		padding-left: 10px;
+	}
+
+	.app-notification__meta { @extend .text-muted; text-align: right; }
+
+	.app-search__button {
+		right: auto;
+		left: 0;
 	}
 
 	@media(min-width: 768px) {
