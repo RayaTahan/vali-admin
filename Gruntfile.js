@@ -65,16 +65,43 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: 'node_modules/vazir-font/dist/', 
 				filter: 'isFile',
-				src: ['*.css','*.eot','*.ttf','*.woff','*.woff2'],
-				dest: 'docs/fonts/vazir/'
+				src: ['*.eot','*.ttf','*.woff','*.woff2'],
+				dest: 'docs/webfonts/'
+			},
+			vazircss: {
+				expand: true,
+				cwd: 'node_modules/vazir-font/dist/', 
+				filter: 'isFile',
+				src: 'font-face.css',
+				dest: 'docs/css/',
+				rename: function(dest, src) {
+						console.log(dest + src);
+						return dest + src.replace('font-face','vazir');
+				  	}
 			},
 			fontawesomecss: {
 				expand: true,
 				cwd: 'node_modules/@fortawesome/fontawesome-free/', 
 				src: ['css/*','webfonts/*'],
-				dest: 'docs/fonts/fontawesome/'
+				dest: 'docs/'
 			}
-		}
+		},
+		'string-replace': {
+			vazir: {
+			  options: {
+				replacements: [{
+				  pattern: /'Vazir/g,
+				  replacement: "'..\/webfonts\/Vazir"
+				}]
+			  },
+			  files: [
+				{
+				 expand: true, flatten: true, 
+				 src: ['docs/css/vazir.css'], dest: 'docs/css/'
+				}
+			]
+			}
+		  }
 	});
 
 	// Load the Grunt plugins.
@@ -83,8 +110,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-string-replace');
 
 	// Set task aliases
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['copy','pug','sass','postcss']);
+	grunt.registerTask('build', ['copy','string-replace','pug','sass','postcss']);
 };
