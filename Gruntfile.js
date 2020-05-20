@@ -122,15 +122,16 @@ module.exports = function(grunt) {
 		},
 		 
 		//S5:Task for Minification
-		uglify: {
-			options: {
-				 mangle:'false'
-			},
-			build: {
-				src: ['docs/js/allapp.js'],
-				dest: 'docs/js/allapp.min.js'
+		uglify: 
+			{
+				options: {
+					mangle:'false'
+				},
+				build: {
+					src: ['docs/js/main.js'],
+					dest: 'docs/js/main.min.js'
+				}
 			}
-		}
 	});
 
 	// Load the Grunt plugins.
