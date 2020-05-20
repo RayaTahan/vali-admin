@@ -101,6 +101,17 @@ module.exports = function(grunt) {
 				}
 			]
 			}
+		},
+		cssmin: {
+			target: {
+			  files: [{
+				expand: true,
+				cwd: 'docs/css',
+				src: ['main.css'],
+				dest: 'docs/css',
+				ext: '.min.css'
+			  }]
+			}
 		  }
 	});
 
@@ -111,8 +122,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-string-replace');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	// Set task aliases
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['copy','string-replace','pug','sass','postcss']);
+	grunt.registerTask('build', ['copy','string-replace','pug','sass','postcss','cssmin']);
 };
