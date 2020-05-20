@@ -28,7 +28,7 @@ block content
 			.tile
 				.tile-body
 					.table-responsive
-						table.table.table-hover.table-bordered#sampleTable
+						table.table.table-hover.table-bordered#sampleTable.datatable
 							thead
 								tr
 									th Name
@@ -439,8 +439,8 @@ block content
 									td $112,000
 
 block specific-js
-	// Data table plugin
-	script(type='text/javascript', src="js/plugins/jquery.dataTables.min.js")
-	script(type='text/javascript', src="js/plugins/dataTables.bootstrap.min.js")
-	script(type='text/javascript').
-		$('#sampleTable').DataTable();
+	//- // Data table plugin
+	//- script(type='text/javascript', src="js/plugins/jquery.dataTables.min.js")
+	//- script(type='text/javascript', src="js/plugins/dataTables.bootstrap.min.js")
+	//- script(type='text/javascript').
+	//- 	$('.datatable').DataTable();
