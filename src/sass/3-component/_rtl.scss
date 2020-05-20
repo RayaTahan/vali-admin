@@ -68,7 +68,7 @@
 		}
 		.app-content {
 			margin-left: 0;
-			margin-right: 260px;
+			margin-right: $sidebar-width;
 			transition: margin-right 0.3s ease;
 		}
 		.sidebar-mini.sidenav-toggled .app-content {
@@ -104,7 +104,7 @@
 		}
 		.app .app-sidebar {
 			left: auto;
-			right: -260px;
+			right: -$sidebar-width;
 		}
 	}
 }
