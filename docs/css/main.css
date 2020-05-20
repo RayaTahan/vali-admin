@@ -15270,9 +15270,9 @@ be a descendant of the grid when it is being dragged.
 }
 
 .treeview.is-expanded .treeview-indicator {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .treeview-menu {
@@ -16281,6 +16281,22 @@ be a descendant of the grid when it is being dragged.
 [dir=rtl] table.table-bordered.dataTable td:last-child,
 [dir=rtl] table.table-bordered.dataTable td:last-child {
   border-right-width: 1px;
+}
+
+[dir=rtl] .treeview.is-expanded .treeview-indicator {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+[dir=rtl] .dropdown-item .fa,
+[dir=rtl] .dropdown-item .icon {
+  margin-right: inherit;
+  margin-left: 5px;
+}
+
+[dir=rtl] .dropdown-item {
+  text-align: right;
 }
 
 @media (min-width: 768px) {

@@ -61,6 +61,24 @@
 		border-right-width: 1px;
 	}
 
+	.treeview {
+		&.is-expanded {
+			.treeview-indicator { transform: rotate(-90deg); }
+		}
+	}
+
+	.dropdown-item {
+		.fa,
+		.icon {
+			margin-right: inherit;
+			margin-left: 5px;
+		}
+	}
+
+	.dropdown-item {
+		text-align: right; // For `<button>`s
+	}
+
 	@media(min-width: 768px) {
 		.app-header {
 			padding-right: 0;
