@@ -112,7 +112,25 @@ module.exports = function(grunt) {
 				ext: '.min.css'
 			  }]
 			}
-		  }
+		},
+		concat: {
+			dist: {
+			 src: ['docs/js/**/*.js', '!docs/js/allapp.js', '!docs/js/allapp.min.js'],
+				// the resulting JS file
+				dest: 'docs/js/allapp.js'            
+			}
+		},
+		 
+		//S5:Task for Minification
+		uglify: {
+			options: {
+				 mangle:'false'
+			},
+			build: {
+				src: ['docs/js/allapp.js'],
+				dest: 'docs/js/allapp.min.js'
+			}
+		}
 	});
 
 	// Load the Grunt plugins.
@@ -123,8 +141,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-string-replace');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Set task aliases
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['copy','string-replace','pug','sass','postcss','cssmin']);
+	grunt.registerTask('build', ['copy','string-replace','pug','sass','postcss','cssmin','concat', 'uglify']);
 };

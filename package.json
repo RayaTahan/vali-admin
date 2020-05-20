@@ -35,7 +35,9 @@
   "homepage": "http://pratikborsadiya.in/blog/vali-admin",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
     "vazir-font": "^26.0.2"
   }
 }
