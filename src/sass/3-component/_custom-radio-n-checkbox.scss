@@ -9,8 +9,8 @@
 			user-select: none;
 
 			&:before {
-				content: "";
-				font-family: "FontAwesome";
+				content: "\f0c8";
+				font-family: "Font Awesome 5 Free";
 				speak: none;
 				font-style: normal;
 				font-weight: normal;
@@ -22,12 +22,13 @@
 				width: 1em;
 				display: inline-block;
 				margin-right: 2px;
+				margin-left: 2px;
 				vertical-align: -2px;
 			}
 		}
 
 		&:checked + .label-text:before {
-			content: "";
+			content: "\f14a";
 			color: $primary-color;
 			animation: tick 180ms ease-in;
 		}
@@ -52,8 +53,8 @@
 			user-select: none;
 
 			&:before {
-				content: "";
-				font-family: "FontAwesome";
+				content: "\f111";
+				font-family: "Font Awesome 5 Free";
 				speak: none;
 				font-style: normal;
 				font-weight: normal;
@@ -65,12 +66,13 @@
 				width: 1em;
 				display: inline-block;
 				margin-right: 2px;
+				margin-left: 2px;
 				vertical-align: -2px;
 			}
 		}
 
 		&:checked + .label-text:before {
-			content: "";
+			content: "\f192";
 			color: $primary-color;
 			animation: tick 180ms ease-in;
 		}

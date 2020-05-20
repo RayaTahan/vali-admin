@@ -15622,8 +15622,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .animated-checkbox input[type="checkbox"] + .label-text:before {
-  content: "";
-  font-family: "FontAwesome";
+  content: "\f0c8";
+  font-family: "Font Awesome 5 Free";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -15635,11 +15635,12 @@ be a descendant of the grid when it is being dragged.
   width: 1em;
   display: inline-block;
   margin-right: 2px;
+  margin-left: 2px;
   vertical-align: -2px;
 }
 
 .animated-checkbox input[type="checkbox"]:checked + .label-text:before {
-  content: "";
+  content: "\f14a";
   color: #4CAF50;
   -webkit-animation: tick 180ms ease-in;
           animation: tick 180ms ease-in;
@@ -15667,8 +15668,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .animated-radio-button input[type="radio"] + .label-text:before {
-  content: "";
-  font-family: "FontAwesome";
+  content: "\f111";
+  font-family: "Font Awesome 5 Free";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -15680,11 +15681,12 @@ be a descendant of the grid when it is being dragged.
   width: 1em;
   display: inline-block;
   margin-right: 2px;
+  margin-left: 2px;
   vertical-align: -2px;
 }
 
 .animated-radio-button input[type="radio"]:checked + .label-text:before {
-  content: "";
+  content: "\f192";
   color: #4CAF50;
   -webkit-animation: tick 180ms ease-in;
           animation: tick 180ms ease-in;
@@ -15747,11 +15749,11 @@ be a descendant of the grid when it is being dragged.
 }
 
 .toggle input[type="checkbox"] + .button-indecator:before {
-  content: "";
-  font-family: "FontAwesome";
+  content: "\f204";
+  font-family: 'Font Awesome 5 Free';
   speak: none;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 900;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
@@ -15759,11 +15761,12 @@ be a descendant of the grid when it is being dragged.
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   margin-right: 5px;
+  margin-left: 5px;
   vertical-align: -2px;
 }
 
 .toggle input[type="checkbox"]:checked + .button-indecator:before {
-  content: "";
+  content: "\f205";
   color: #4CAF50;
   -webkit-animation: toggleBtn 0.3s ease-in-out;
           animation: toggleBtn 0.3s ease-in-out;
